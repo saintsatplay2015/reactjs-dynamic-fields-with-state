@@ -18,16 +18,109 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+main {
+  @apply pt-10 pl-12 pr-12;
+}
+
+
+.search {
+  @apply mb-12 flex;
+
+}
+
+.search__input {
+  width: 50%;
+}
+
+.search__action {
+  width: 25%;
+  padding-left: 2rem;
+}
+
+.details {
+  @apply mt-12;
+}
+
+.details .details__head,
+.details .details__row,
+.details .details__footer {
+  @apply m-auto w-full grid grid-cols-5 col-start-1 col-end-5 auto-cols-max;
+}
+
+.details .details__caption,
+.results .results__caption {
+  @apply pt-3 pb-3 text-center text-lg;
+}
+
+.results .results__head,
+.results .results__row {
+  @apply m-auto w-full grid grid-cols-4 col-start-1 col-end-4 auto-cols-max;
+}
+
+.details .details__head--column,
+.results .results__head--column {
+  @apply border bg-gray-100 border-gray-200 pl-3 pr-2 pt-3 pb-3 place-items-start;
+} 
+
+.details .details__footer--column {
+  @apply border bg-gray-100 pl-3 pr-2 pt-3 pb-3 place-items-start;
+} 
+
+.details .details__head--column strong,
+.results .results__head--column strong {
+  @apply text-lg p-3;
+}
+
+.column {
+   @apply border border-gray-200 pl-3 pr-2 pt-3 pb-3 place-items-start; 
+}
+
+.add {
+  @apply mt-12 m-auto w-full grid grid-cols-6 col-start-1 col-end-6 auto-cols-max;
+}
+
+label,
+input,
+select {
+  @apply block w-full;
+}
+
+label {
+  @apply font-semibold text-lg pb-1;
+}
+input,
+select {
+  @apply appearance-none mt-3 p-3 rounded-lg text-lg;
+}
+
+.blank {
+  @apply bg-transparent;
+}
+
+.grey {
+  @apply bg-gray-100;
+}
+.placeholder {
+  @apply mt-1 p-3 text-center text-lg italic;
+}
+
+button {
+  @apply block w-full appearance-none bg-sky-500 mt-3 pt-4 pb-4 pl-7 pr-7 text-white rounded-lg;
+}
+
+.red {
+  @apply bg-red-600;
+}
+
+.submit {
+  @apply bg-indigo-500;
 }
